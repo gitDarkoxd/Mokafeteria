@@ -1,0 +1,18 @@
+html{
+    background-color:rgb(200, 137, 74)
+}
+.titulo{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:rgb(200, 137, 74) 
+}
+.navbar-brand{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.container-fluid{
+    background-color:rgb(241, 186, 131)
+}
+
+.card{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:rgb(146, 102, 59)
+}
