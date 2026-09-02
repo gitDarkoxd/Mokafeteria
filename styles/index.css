@@ -1,3 +1,10 @@
+/**
+actualizzar repositorio
+git remote add origin https://github.com/gitDarkoxd/Cafeteria-Muffin.git
+git branch -M main
+git push -u origin main
+ */
+
 html{
     background-color:rgb(200, 137, 74)
 }
