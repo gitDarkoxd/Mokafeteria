@@ -227,3 +227,47 @@ function setupEvents() {
     modal.hide();
   });
 }
+
+//RESERVAS
+
+const reservaForm = document.getElementById('reservaForm');
+const reservaMensaje = document.getElementById('reservaMensaje');
+
+reservaForm.addEventListener('submit', function(evento) {
+    evento.preventDefault();
+
+    const fechaIngresada = document.getElementById('reservaFecha').value;
+    const horaIngresada = document.getElementById('reservaHora').value;
+    const personasIngresadas = document.getElementById('reservaPersonas').value;
+
+    const hoy = new Date();
+    hoy.setHours(0, 0, 0, 0);
+    const fechaReserva = new Date(fechaIngresada + 'T00:00:00');
+
+    if (fechaReserva < hoy) {
+        mostrarMensaje('Por favor, elige una fecha a partir de hoy.', 'danger');
+        return;
+    }
+
+    // validar hora
+    const hora = parseInt(horaIngresada.split(':')[0]);
+    if (hora < 8 || hora >= 22) {
+        mostrarMensaje('Nuestro horario de atención es de 08:00 a 22:00 hrs.', 'danger');
+        return;
+    }
+
+    // Validar Personas (Entre 1 y 20)
+    if (personasIngresadas < 1 || personasIngresadas > 20) {
+        mostrarMensaje('Las reservas deben ser para entre 1 y 20 personas.', 'danger');
+        return;
+    }
+
+    mostrarMensaje('¡Reserva confirmada con éxito! Te esperamos.', 'success');
+    reservaForm.reset();
+});
+
+function mostrarMensaje(texto, tipo) {
+    reservaMensaje.textContent = texto;
+    reservaMensaje.className = `alert alert-${tipo} mb-4`; 
+    reservaMensaje.classList.remove('d-none');
+}

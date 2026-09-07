@@ -96,6 +96,42 @@
     </div>
   </div>
 
+  <!--RESERVA DE MESAS-->
+  <div id="reservas" class="text-center py-5">
+    <div class="container">
+      
+      <h1 class="fw-bold display-5 brand-title mb-3">Reserva tu mesa</h1>
+      
+      <div class="row justify-content-center text-start">
+        <div class="col-md-8 col-lg-6">
+          
+          <div id="reservaMensaje" class="alert d-none" role="alert"></div>
+
+          <form id="reservaForm">
+            <div class="mb-4">
+              <label for="reservaFecha" class="form-label fw-semibold">Fecha</label>
+              <input type="date" id="reservaFecha" class="form-control form-control-lg" required>
+            </div>
+            
+            <div class="mb-4">
+              <label for="reservaHora" class="form-label fw-semibold">Hora</label>
+              <input type="time" id="reservaHora" class="form-control form-control-lg" required>
+            </div>
+            
+            <div class="mb-5">
+              <label for="reservaPersonas" class="form-label fw-semibold">Número de personas</label>
+              <input type="number" id="reservaPersonas" class="form-control form-control-lg" min="1" max="20" placeholder="Ej: 2" required>
+            </div>
+            
+            <button type="submit" class="btn btn-dark btn-lg w-100 fw-bold shadow-sm">Confirmar Reserva</button>
+          </form>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
   <!--SOBRE NOSOTROS-->
   <div id="sobre-nosotros" class="text-center text-light py-5 mt-5">
     <div class="container">

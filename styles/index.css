@@ -147,6 +147,11 @@ main {
   transform: scale(1.1);
 }
 
+/* RESERVA DE MESAS */
+#reservas {
+    background-color: rgba(62, 39, 35, 0.3);
+}
+
 /* SOBRE NOSOTROS */
 .foto-galeria {
     width: 100%;       
@@ -155,7 +160,7 @@ main {
 }
 
 #sobre-nosotros {
-    background-color: #8a6242;
+    background-color: rgb(200, 137, 74);;
     scroll-margin-top: 70px;
 }
 
