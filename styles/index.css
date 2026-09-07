@@ -147,6 +147,18 @@ main {
   transform: scale(1.1);
 }
 
+/* SOBRE NOSOTROS */
+.foto-galeria {
+    width: 100%;       
+    height: 250px;
+    object-fit: cover; 
+}
+
+#sobre-nosotros {
+    background-color: #8a6242;
+    scroll-margin-top: 70px;
+}
+
 /* MODAL Y FOOTER */
 .btn-primary-custom {
   background-color: var(--coffee-dark);
