@@ -3,14 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const formRegister = document.getElementById('formRegister');
 
   // Reglas de validación
-  // 1. Correo con formato válido (ej. usuario@dominio.cl)
+  // 1. Correo con formato válido (ej. usuario@correo.cl)
   const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   // 2. Contraseña: 8 a 20 caracteres, al menos una mayúscula y un número
   const regexPassword = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&._-]{8,20}$/;
 
-  
   // Valida un campo de correo y actualiza clases de Bootstrap
-  
   function validarCorreo(inputElement) {
     const valor = inputElement.value.trim();
     if (!regexEmail.test(valor)) {
@@ -24,9 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  
-   // Valida un campo de contraseña y actualiza clases de Bootstrap
-  
+  // Valida un campo de contraseña y actualiza clases de Bootstrap
   function validarPassword(inputElement) {
     const valor = inputElement.value;
     if (!regexPassword.test(valor)) {
@@ -56,10 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const passValido = validarPassword(loginPassword);
 
     if (emailValido && passValido) {
-      alert('¡Inicio de sesión exitoso! Bienvenido a Mokafetería.');
-      formLogin.reset();
-      loginEmail.classList.remove('is-valid');
-      loginPassword.classList.remove('is-valid');
+      // 1. Obtener la lista de usuarios desde localStorage
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+      // 2. Comprobar si el correo y la clave coinciden con un registro previo
+      const usuarioValido = usuarios.find(
+        (u) => u.correo === loginEmail.value.trim() && u.password === loginPassword.value
+      );
+
+      if (usuarioValido) {
+        alert(`¡Inicio de sesión exitoso! Bienvenido/a a Mokafetería, ${usuarioValido.nombre}.`);
+        formLogin.reset();
+        loginEmail.classList.remove('is-valid');
+        loginPassword.classList.remove('is-valid');
+      } else {
+        alert('Correo o contraseña incorrectos, o el usuario no existe.');
+      }
     }
   });
 
@@ -95,7 +103,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const passValido = validarPassword(regPassword);
 
     if (nombreValido && emailValido && passValido) {
+      // 1. Obtener lista actual o arreglo vacío
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+      // 2. Verificar que el correo no esté duplicado
+      const existe = usuarios.some((u) => u.correo === regEmail.value.trim());
+      if (existe) {
+        alert('Este correo ya está registrado en Mokafetería. Prueba iniciando sesión.');
+        return;
+      }
+
+      // 3. Crear el objeto del usuario nuevo
+      const nuevoUsuario = {
+        nombre: regName.value.trim(),
+        correo: regEmail.value.trim(),
+        password: regPassword.value
+      };
+
+      // 4. Guardar en el LocalStorage
+      usuarios.push(nuevoUsuario);
+      localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
       alert('¡Registro exitoso en Mokafetería! Ya puedes iniciar sesión.');
+
       formRegister.reset();
       regName.classList.remove('is-valid');
       regEmail.classList.remove('is-valid');
