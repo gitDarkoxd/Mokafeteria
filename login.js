@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         formLogin.reset();
         loginEmail.classList.remove('is-valid');
         loginPassword.classList.remove('is-valid');
+        // Redirigir a la página principal (index.html)
+        window.location.href = "index.html";
       } else {
         alert('Correo o contraseña incorrectos, o el usuario no existe.');
       }
