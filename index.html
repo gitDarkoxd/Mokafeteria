@@ -132,23 +132,73 @@
     </div>
   </div>
 
-  <!--SOBRE NOSOTROS-->
-  <div id="sobre-nosotros" class="text-center text-light py-5 mt-5">
+  <!--UBICACION Y HORARIO DE ATENCION-->
+  <div id="ubicacion-horario" class="text-center text-light py-4">
     <div class="container">
-    <h1 class="fw-bold display-5 brand-title">Sobre Nosotros</h1>
-    <p class="lead">Mokafetería es un emprendimiento familiar que lleva siendo administrado de generación en generación desde 1991,<br>
-                    preservando recetas antiguas así como también agregando productos actualizados a su carta para entregarle a la<br>
-                    comunidad la mejor diversidad de café y sabores.</p>
-    <div class="row text-center">
-  <div class="col-md-4 mb-4">
-    <img src="Imagenes/cafeteria-personas.webp" alt="Fundadores" class="img-fluid rounded shadow-sm foto-galeria">
+      <h1 class="fw-bold display-5 brand-title">Dónde y cuándo encontrarnos</h1>
+        <div>
+          <strong>Dirección:</strong>
+            <p class="mb-1 text-muted">Av. Libertad 1254, Viña del Mar, Chile<br></p>
+        </div>
+         <div>
+          <strong>Horario</strong>
+            <p class="mb-1 text-muted">08:00 - 22:00<br>Lunes a Domingo</p>
+        </div>
+    </div>
   </div>
-  <div class="col-md-4 mb-4">
-    <img src="Imagenes/cafeteria-verde.jpg" alt="barista" class="img-fluid rounded shadow-sm foto-galeria">
-  </div>
-  <div class="col-md-4 mb-4">
-    <img src="Imagenes/cafeteria-pared.jpg" alt="barista" class="img-fluid rounded shadow-sm foto-galeria">
-  </div>
+
+ <!--SOBRE NOSOTROS-->
+  <div id="sobre-nosotros" class="text-light py-5 mt-2">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- TEXTO -->
+        <div class="col-md-6 text-start mb-4 mb-md-0">
+          <h1 class="fw-bold display-5 brand-title mb-4">Sobre Nosotros</h1>
+          <p class="lead">Fundada en el año 2026, Mokafetería nació con la idea de crear un espacio donde siempre te sientas bienvenido, disfrutando de un buen café de especialidad y pastelería horneada a diario.</p>
+        </div>
+
+        <!-- CARROUSEL AUTOMATICO DE FOTOS -->
+        <div class="col-md-6">
+          <div id="carruselSobreNosotros" class="carousel slide shadow-sm rounded" data-bs-ride="carousel">
+            
+            <div class="carousel-inner rounded">
+            
+              <div class="carousel-item active" data-bs-interval="3000">
+                <img src="Imagenes/cafe-y-pastel.jpg" alt="Fundadores" class="d-block w-100 carrusel-img">
+              </div>
+              
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="Imagenes/cafeteria-verde.jpg" alt="Barista" class="d-block w-100 carrusel-img">
+              </div>
+              
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="Imagenes/cafeteria-pared.jpg" alt="Interior" class="d-block w-100 carrusel-img">
+              </div>
+
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="Imagenes/cafetero.jpg" alt="Interior" class="d-block w-100 carrusel-img">
+              </div>
+
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="Imagenes/mesas.webp" alt="Interior" class="d-block w-100 carrusel-img">
+              </div>
+
+            </div>
+
+            <!-- Botones de control (Flechas izquierda y derecha) -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselSobreNosotros" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselSobreNosotros" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+            
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
