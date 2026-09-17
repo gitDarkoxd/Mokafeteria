@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77ab735-7af4-4b8f-94aa-60842e60d24b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Imagenes/cafeteria-personas.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/estilos.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.css" afterDir="false" />
-    </list>
+    <list default="true" id="e77ab735-7af4-4b8f-94aa-60842e60d24b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

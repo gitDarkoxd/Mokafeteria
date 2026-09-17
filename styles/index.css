@@ -154,13 +154,13 @@ main {
 
 /*UBICACION Y HORARIO */
 #ubicacion-horario {
-  background-color: rgba(204, 127, 49, 0.9);
+  background-color: rgb(202, 148, 93);
 }
 
 
 /* SOBRE NOSOTROS */
 #sobre-nosotros {
-    background-color: rgb(200, 137, 74);;
+    background-color: rgb(200, 137, 74);
     scroll-margin-top: 70px;
 }
 
