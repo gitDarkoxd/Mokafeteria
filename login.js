@@ -126,17 +126,22 @@ document.addEventListener('DOMContentLoaded', () => {
       usuarios.push(nuevoUsuario);
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-      alert('¡Registro exitoso en Mokafetería! Ya puedes iniciar sesión.');
+      alert('¡Registro exitoso en Mokafetería! Ya puedes entrar a Mokafetería.');
 
       formRegister.reset();
       regName.classList.remove('is-valid');
       regEmail.classList.remove('is-valid');
       regPassword.classList.remove('is-valid');
-
+      // Redirección directa a index.html tras registrarse
+      window.location.href = "index.html";
+      // 
       // Cambiar a la pestaña de login automáticamente tras el registro
-      const loginTabBtn = document.getElementById('login-tab');
-      const tabInstance = new bootstrap.Tab(loginTabBtn);
-      tabInstance.show();
+      //const loginTabBtn = document.getElementById('login-tab');
+      //const tabInstance = new bootstrap.Tab(loginTabBtn);
+      //tabInstance.show();
+      //
+
+      
     }
   });
 });
