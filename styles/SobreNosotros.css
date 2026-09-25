@@ -1,0 +1,64 @@
+/* ESTILOS PERSONALIZADOS MOKAFETERÍA */
+
+:root {
+  --bg-color: rgb(200, 137, 74);
+  --header-color: rgb(241, 186, 131);
+  --coffee-dark: #3e2723;
+  --coffee-accent: #5d4037;
+  --card-bg: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* NAVBAR Y HEADER */
+.brand-navbar {
+  background-color: var(--header-color) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.text-coffee {
+  color: var(--coffee-dark);
+}
+
+.search-icon {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: transparent;
+  color: var(--coffee-dark);
+}
+
+.search-input {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: transparent;
+}
+
+.search-input:focus {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(62, 39, 35, 0.25);
+  border-color: var(--coffee-dark);
+}
+
+.btn-cart {
+  background-color: var(--coffee-dark);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 6px 18px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-cart:hover {
+  background-color: var(--coffee-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}

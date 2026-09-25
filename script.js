@@ -18,10 +18,10 @@ const products = [
   },
   {
     id: 3,
-    name: "Café & Muffin de Arándanos",
+    name: "Café & Torta con chocolate",
     category: "reposteria",
     price: 4500,
-    description: "Café americano recién elaborado acompañado de un muffin casero horneado hoy.",
+    description: "Café americano recién elaborado acompañado de una torta casera recien preparada.",
     image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=500&q=80"
   },
   {
